@@ -28,6 +28,7 @@
     <color name="light_blue">#2350B2</color>
 
     <color name="light_light_blue">#2196F3</color>
+    <color name="light_light_blue_background">#832196F3</color>
 
 
     <color name="text_color">#FFFFFFFF</color>
