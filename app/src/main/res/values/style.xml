@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="chipStyle" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/red_background</item>
+        <item name="materialThemeOverlay">@style/Widget.MaterialComponents.Chip.Choice</item>
+    </style>
+
+    <style name="floatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="background">@color/light_blue</item>
+        <item name="backgroundTint">@color/light_blue</item>
+        <item name="tint">@color/white</item>
+    </style>
+
+</resources>

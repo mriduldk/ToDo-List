@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalendarActivity"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutToolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/calender_background"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_round_keyboard_backspace_24"
+            android:padding="14dp"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/amiko"
+            android:text="Calendar"
+            android:textColor="@color/text_color"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+
+    <com.michalsvec.singlerowcalendar.calendar.SingleRowCalendar
+        android:id="@+id/main_single_row_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:deselection="false"
+        app:longPress="false"
+        app:multiSelection="false"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayoutToolbar"
+        android:layout_marginBottom="30dp"/>
+
+<!--    <androidx.viewpager.widget.ViewPager-->
+<!--        android:id="@+id/tab_viewpager"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/main_single_row_calendar"-->
+<!--        android:visibility="gone"/>-->
+
+
+    <in.codingstudio.calendardayevent.CalendarDayEvent
+        android:id="@+id/calendarDayEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/main_single_row_calendar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
